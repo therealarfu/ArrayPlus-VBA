@@ -8,21 +8,21 @@ A module with extra functions for arrays in VBA
 
 > Functions
 
-+AT
-+Clear
-+ConcatArray
-+CountArray
-+Includes
-+IndexArray
-+Insert
-+Length
-+MaxArray
-+MinArray
-+Pop
-+QuickSort
-+RandArray
-+Reduce
-+Remove
-+Reverse
-+Shuffle
-+Swap
++ AT
++ Clear
++ ConcatArray
++ CountArray
++ Includes
++ IndexArray
++ Insert
++ Length
++ MaxArray
++ MinArray
++ Pop
++ QuickSort
++ RandArray
++ Reduce
++ Remove
++ Reverse
++ Shuffle
++ Swap
