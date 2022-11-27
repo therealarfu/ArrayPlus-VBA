@@ -1,8 +1,7 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/112352728/204159666-0f18265f-c0da-4220-b905-d8a0004032b8.png"/>
+  <img src="https://user-images.githubusercontent.com/112352728/204159752-8e420ed2-ac7f-4158-8617-a32c86a8352f.png"/>
 </p><br/>
 
-A module with extra functions for arrays in VBA  
 ## Version
 > 1.4
 
