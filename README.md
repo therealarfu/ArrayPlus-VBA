@@ -3,7 +3,7 @@
 </p><br/>
 
 ## Version
-> 1.4
+> 1.5
 
 ## Documentation
 
