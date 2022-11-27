@@ -6,7 +6,7 @@ Attribute VB_Name = "ArrayPlus"
 
 Option Explicit
 
-Public Function Length(list As Variant) As Single
+Public Function Length(list As Variant) As Long
     If IsArray(list) Then Length = UBound(list) + 1
 End Function
 
