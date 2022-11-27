@@ -32,7 +32,7 @@ End Function
     End If
 End Function
 
-Public Function AT(list As Variant, Optional ByVal Index As Single = 0, Optional ByVal ReturnIndex As Boolean = False)
+Public Function AT(list As Variant, Optional ByVal Index As Long = 0, Optional ByVal ReturnIndex As Boolean = False)
     If IsArray(list) Then
         If UBound(list) + 1 > 0 Then
             If Index >= 0 And Index <= UBound(list) Then
@@ -50,7 +50,7 @@ Public Function AT(list As Variant, Optional ByVal Index As Single = 0, Optional
 End Function
 
 Public Function Insert(list As Variant, Item As Variant, Optional ByVal Index As Long)
-    Dim i As Single
+    Dim i As Long
     If IsArray(list) Then
         Index = AT(list, Index, True)
         If UBound(list) < Index Or Index = 0 Then
@@ -79,7 +79,7 @@ Public Function Insert(list As Variant, Item As Variant, Optional ByVal Index As
 End Function
 
 Public Function Remove(list As Variant, ByVal Value)
-    Dim i As Single, Index As Single
+    Dim i As Long, Index As Long
     If IsArray(list) And Includes(list, Value) Then
         Index = IndexOf(list, Value)
         If UBound(list) = Index And UBound(list) + 1 > 1 Then
@@ -103,8 +103,8 @@ Public Function Remove(list As Variant, ByVal Value)
     End If
 End Function
 
-Public Function Pop(list As Variant, Optional ByVal Index As Single)
-    Dim i As Single
+Public Function Pop(list As Variant, Optional ByVal Index As Long)
+    Dim i As Long
     If IsArray(list) Then
         If IsMissing(Index) = False Then Index = AT(list, Index, True)
         If IsMissing(Index) Or Index > UBound(list) Or UBound(list) = Index And UBound(list) + 1 > 1 Then
@@ -129,7 +129,7 @@ Public Function Pop(list As Variant, Optional ByVal Index As Single)
 End Function
 
 Public Function Includes(list As Variant, Item As Variant) As Boolean
-    Dim i As Single
+    Dim i As Long
     If IsArray(list) Then
         For i = 0 To UBound(list)
             If IsObject(Item) And IsObject(list(i)) Then
@@ -142,7 +142,7 @@ Public Function Includes(list As Variant, Item As Variant) As Boolean
 End Function
 
 Public Function IndexOf(list As Variant, Item As Variant) As Long
-    Dim i As Single
+    Dim i As Long
     If IsArray(list) Then
         For i = 0 To UBound(list)
             If IsObject(Item) And IsObject(list(i)) Then
@@ -165,7 +165,7 @@ Public Function IndexOf(list As Variant, Item As Variant) As Long
 End Function
 
 Public Function CountOf(list As Variant, Item As Variant) As Long
-    Dim i As Single
+    Dim i As Long
     If IsArray(list) Then
         For i = 0 To UBound(list)
             If IsObject(Item) And IsObject(list(i)) Then
@@ -178,7 +178,7 @@ Public Function CountOf(list As Variant, Item As Variant) As Long
 End Function
 
 Public Function Reverse(list As Variant)
-    Dim handlerlist As Variant, i As Single
+    Dim handlerlist As Variant, i As Long
     handlerlist = Array()
     If IsArray(list) Then
         For i = UBound(list) To 0 Step -1
@@ -190,7 +190,7 @@ End Function
 
 
 Public Function ConcatOf(List1 As Variant, List2 As Variant)
-    Dim i As Single
+    Dim i As Long
     If IsArray(List1) And IsArray(List2) Then
         For i = 0 To UBound(List2)
             Insert List1, List2(i)
@@ -199,7 +199,7 @@ Public Function ConcatOf(List1 As Variant, List2 As Variant)
 End Function
 
 Public Function Shuffle(list)
-    Dim handler As Variant, randarr As Variant, i As Single
+    Dim handler As Variant, randarr As Variant, i As Long
     If IsArray(list) Then
         handler = Array()
         For i = 0 To UBound(list)
@@ -220,8 +220,8 @@ Public Function RandArray(list As Variant)
     If IsArray(list) Then RandArray = list(Int((UBound(list) + 1) * Rnd + 0))
 End Function
 
-Public Function Reduce(list As Variant, ByVal Weight As Single, Optional ByVal Right As Boolean = False)
-    Dim i As Single
+Public Function Reduce(list As Variant, ByVal Weight As Long, Optional ByVal Right As Boolean = False)
+    Dim i As Long
     If IsArray(list) Then
         If Right Then
             If Weight - 1 >= UBound(list) Then
@@ -241,7 +241,7 @@ Public Function Reduce(list As Variant, ByVal Weight As Single, Optional ByVal R
     End If
 End Function
 
-Public Function Swap(list As Variant, ByVal Index1 As Integer, ByVal Index2 As Integer)
+Public Function Swap(list As Variant, ByVal Index1 As Long, ByVal Index2 As Long)
     Dim tmp As Variant
     If IsArray(list) Then
         Index1 = AT(list, Index1, True)
@@ -252,8 +252,8 @@ Public Function Swap(list As Variant, ByVal Index1 As Integer, ByVal Index2 As I
     End If
 End Function
 
-Public Function Slice(list As Variant, ByVal StartPos As Integer, ByVal EndPos As Integer)
-    Dim sliced As Variant, i As Single
+Public Function Slice(list As Variant, ByVal StartPos As Long, ByVal EndPos As Long)
+    Dim sliced As Variant, i As Long
     sliced = Array()
     If IsArray(list) Then
         StartPos = AT(list, StartPos, True)
@@ -266,7 +266,7 @@ Public Function Slice(list As Variant, ByVal StartPos As Integer, ByVal EndPos A
 End Function
 
 Public Function Map(list As Variant, ByVal Func As String)
-    Dim i As Single, maparray As Variant
+    Dim i As Long, maparray As Variant
     maparray = Array()
     If IsArray(list) Then
         For i = 0 To UBound(list)
@@ -277,7 +277,7 @@ Public Function Map(list As Variant, ByVal Func As String)
 End Function
 
 Public Function Find(list As Variant, ByVal Func As String)
-    Dim i As Single
+    Dim i As Long
     If IsArray(list) Then
         For i = 0 To UBound(list)
             If Application.Run(Func, list(i), i) = True Then
@@ -289,7 +289,7 @@ Public Function Find(list As Variant, ByVal Func As String)
 End Function
 
 Public Function FindIndex(list As Variant, ByVal Func As String) As Long
-    Dim i As Single
+    Dim i As Long
     FindIndex = -1
     If IsArray(list) Then
         For i = 0 To UBound(list)
@@ -302,7 +302,7 @@ Public Function FindIndex(list As Variant, ByVal Func As String) As Long
 End Function
 
 Public Function Filter(list As Variant, ByVal Func As String)
-    Dim i As Single, filtered As Variant
+    Dim i As Long, filtered As Variant
     filtered = Array()
     If IsArray(list) Then
         For i = 0 To UBound(list)
@@ -313,7 +313,7 @@ Public Function Filter(list As Variant, ByVal Func As String)
 End Function
 
 Public Function Every(list As Variant, ByVal Func As String) As Boolean
-    Dim i As Single
+    Dim i As Long
     Every = False
     If IsArray(list) Then
         For i = 0 To UBound(list)
@@ -324,7 +324,7 @@ Public Function Every(list As Variant, ByVal Func As String) As Boolean
 End Function
 
 Public Function Some(list As Variant, ByVal Func As String) As Boolean
-    Dim i As Single
+    Dim i As Long
     Some = True
     If IsArray(list) Then
         For i = 0 To UBound(list)
