@@ -10,7 +10,7 @@ Public Function Length(list As Variant) As Long
     If IsArray(list) Then Length = UBound(list) + 1
 End Function
 
-    Public Function MinOf(list As Variant) As Double
+Public Function MinOf(list As Variant) As Double
     Dim i%
     If IsArray(list) Then
         For i = LBound(list) To UBound(list)
@@ -21,7 +21,7 @@ End Function
     End If
 End Function
 
-    Public Function MaxOf(list As Variant) As Double
+Public Function MaxOf(list As Variant) As Double
     Dim i%
     If IsArray(list) Then
         For i = LBound(list) To UBound(list)
@@ -49,7 +49,7 @@ Public Function AT(list As Variant, Optional ByVal Index As Long = 0, Optional B
     End If
 End Function
 
-Public Function Insert(list As Variant, Item As Variant, Optional ByVal Index As Long)
+Public Sub Insert(list As Variant, Item As Variant, Optional ByVal Index As Long)
     Dim i As Long
     If IsArray(list) Then
         Index = AT(list, Index, True)
@@ -76,9 +76,9 @@ Public Function Insert(list As Variant, Item As Variant, Optional ByVal Index As
             End If
         End If
     End If
-End Function
+End Sub
 
-Public Function Remove(list As Variant, ByVal Value)
+Public Sub Remove(list As Variant, ByVal Value)
     Dim i As Long, Index As Long
     If IsArray(list) And Includes(list, Value) Then
         Index = IndexOf(list, Value)
@@ -101,9 +101,9 @@ Public Function Remove(list As Variant, ByVal Value)
             Exit Function
         End If
     End If
-End Function
+End Sub
 
-Public Function Pop(list As Variant, Optional ByVal Index As Long)
+Public Sub Pop(list As Variant, Optional ByVal Index As Long)
     Dim i As Long
     If IsArray(list) Then
         If IsMissing(Index) = False Then Index = AT(list, Index, True)
@@ -126,7 +126,7 @@ Public Function Pop(list As Variant, Optional ByVal Index As Long)
             Exit Function
         End If
     End If
-End Function
+End Sub
 
 Public Function Includes(list As Variant, Item As Variant) As Boolean
     Dim i As Long
@@ -177,7 +177,7 @@ Public Function CountOf(list As Variant, Item As Variant) As Long
     End If
 End Function
 
-Public Function Reverse(list As Variant)
+Public Sub Reverse(list As Variant)
     Dim handlerlist As Variant, i As Long
     handlerlist = Array()
     If IsArray(list) Then
@@ -186,19 +186,19 @@ Public Function Reverse(list As Variant)
         Next
         list = handlerlist
     End If
-End Function
+End Sub
 
 
-Public Function ConcatOf(List1 As Variant, List2 As Variant)
+Public Sub ConcatOf(List1 As Variant, List2 As Variant)
     Dim i As Long
     If IsArray(List1) And IsArray(List2) Then
         For i = 0 To UBound(List2)
             Insert List1, List2(i)
         Next
     End If
-End Function
+End Sub
 
-Public Function Shuffle(list)
+Public Sub Shuffle(list)
     Dim handler As Variant, randarr As Variant, i As Long
     If IsArray(list) Then
         handler = Array()
@@ -209,18 +209,18 @@ Public Function Shuffle(list)
         Next
         list = handler
     End If
-End Function
+End Sub
 
-Public Function Clear(list As Variant)
+Public Sub Clear(list As Variant)
     If IsArray(list) Then list = Array(Empty)
-End Function
+End Sub
 
 Public Function RandArray(list As Variant)
     Randomize
     If IsArray(list) Then RandArray = list(Int((UBound(list) + 1) * Rnd + 0))
 End Function
 
-Public Function Reduce(list As Variant, ByVal Weight As Long, Optional ByVal Right As Boolean = False)
+Public Sub Reduce(list As Variant, ByVal Weight As Long, Optional ByVal Right As Boolean = False)
     Dim i As Long
     If IsArray(list) Then
         If Right Then
@@ -239,7 +239,7 @@ Public Function Reduce(list As Variant, ByVal Weight As Long, Optional ByVal Rig
             End If
         End If
     End If
-End Function
+End Sub
 
 Public Function Swap(list As Variant, ByVal Index1 As Long, ByVal Index2 As Long)
     Dim tmp As Variant
