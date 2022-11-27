@@ -23,8 +23,8 @@ A module with extra functions for arrays in VBA
 | Insert | Inserts a new item in the provided list | Variant |
 | Length | Returns the size of the list | Long |
 | Map | Creates a new array populated with the results of calling a provided function on every element in the calling array  | Variant |
-| MinOf | Returns the smallest number in the list | Single |
-| MaxOf | Returns the biggest number in the list | Single |
+| MinOf | Returns the smallest number in the list | Double |
+| MaxOf | Returns the biggest number in the list | Double |
 | Pop | Removes an item in the list by the provided index | Variant |
 | QuickSort | Sorts the elements of an array  | Variant |
 | RandArray | Returns a random item in the list | Variant |
