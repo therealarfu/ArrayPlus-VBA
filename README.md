@@ -1,4 +1,6 @@
-![image](https://user-images.githubusercontent.com/112352728/204159310-b5981288-229a-4a19-960d-71b1cc97c955.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/112352728/204159310-b5981288-229a-4a19-960d-71b1cc97c955.png" height="180"/>
+</p><br/>
 A module with extra functions for arrays in VBA
 
 ## Version
