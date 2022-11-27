@@ -288,7 +288,7 @@ Public Function Find(list As Variant, ByVal Func As String)
     End If
 End Function
 
-Public Function FindIndex(list As Variant, ByVal Func As String)
+Public Function FindIndex(list As Variant, ByVal Func As String) As Long
     Dim i As Single
     FindIndex = -1
     If IsArray(list) Then
