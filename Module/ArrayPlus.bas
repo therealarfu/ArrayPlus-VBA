@@ -98,7 +98,7 @@ Public Sub Remove(list As Variant, ByVal Value)
         ElseIf UBound(list) >= Index And UBound(list) + 1 = 1 Then
             ReDim list(UBound(list) - UBound(list))
         Else
-            Exit Function
+            Exit Sub
         End If
     End If
 End Sub
@@ -123,7 +123,7 @@ Public Sub Pop(list As Variant, Optional ByVal Index As Long)
         ElseIf UBound(list) >= Index And UBound(list) + 1 = 1 Then
             ReDim list(UBound(list) - UBound(list))
         Else
-            Exit Function
+            Exit Sub
         End If
     End If
 End Sub
