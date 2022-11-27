@@ -10,7 +10,7 @@ Public Function Length(list As Variant) As Long
     If IsArray(list) Then Length = UBound(list) + 1
 End Function
 
-Public Function MinOf(list As Variant) As Single
+    Public Function MinOf(list As Variant) As Double
     Dim i%
     If IsArray(list) Then
         For i = LBound(list) To UBound(list)
@@ -21,7 +21,7 @@ Public Function MinOf(list As Variant) As Single
     End If
 End Function
 
-Public Function MaxOf(list As Variant) As Single
+    Public Function MaxOf(list As Variant) As Double
     Dim i%
     If IsArray(list) Then
         For i = LBound(list) To UBound(list)
