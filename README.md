@@ -19,7 +19,7 @@
 | Filter | Creates a new array composed by the items that passed the test implement by the provided function | Variant |
 | Find | Returns the first item in the array that passed the test implemented by the provided function | Variant |
 | FindIndex | Returns the first item index in the array that passed the test implemented by the provided function (returns -1 if it doesn't exist) | Long |
-| Includes | Returns if the chosen item is in the provided list | Boolean |
+| IncludesOf | Returns if the chosen item is in the provided list | Boolean |
 | IndexOf | Returns the index of the provided item (returns -1 if it doesn't exist) | Long |
 | Insert | Inserts a new item in the provided list | Sub |
 | Length | Returns the size of the list | Long |
@@ -28,7 +28,7 @@
 | MaxOf | Returns the biggest number in the list | Double |
 | Pop | Removes an item in the list by the provided index | Sub |
 | QuickSort | Sorts the elements of an array  | Sub |
-| RandArray | Returns a random item in the list | Variant |
+| RandomArray | Returns a random item in the list | Variant |
 | Reduce | Reduces the list based on the weight provided | Sub |
 | Remove | Removes an item in the list by the provided name | Sub |
 | Reverse | Reverses the order of the list | Sub |
