@@ -22,7 +22,7 @@
 | IncludesOf | Returns if the chosen item is in the provided list | Boolean |
 | IndexOf | Returns the index of the provided item (returns -1 if it doesn't exist) | Long |
 | Insert | Inserts a new item in the provided list | Sub |
-| Length | Returns the size of the list | Long |
+| LengthOf | Returns the size of the list | Long |
 | Map | Creates a new array populated with the results of calling a provided function on every element in the calling array  | Variant |
 | MinOf | Returns the smallest number in the list | Double |
 | MaxOf | Returns the biggest number in the list | Double |
